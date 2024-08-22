@@ -1,0 +1,237 @@
+body {
+    font-family: 'League Spartan', sans-serif;
+    background-color: #ffffff;
+}
+
+.container{
+    margin-top: 4rem;
+}
+/**
+ * Header
+ */
+.header-text__subtitle {
+    color: #0062E0;
+    font-size: 20px;
+    font-weight: 600;
+}
+.header-text__title {
+    color: #1A1A1A;
+    font-size:40px;
+    font-weight: 700;
+    line-height: 40px;
+}
+/**
+ * Stepper
+ */
+
+.stepper {
+    margin-top: 30px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.step:hover {
+    cursor: pointer;
+}
+
+.step__active, .date__to {
+    position: relative;
+    padding: 10px;
+    border-radius: 6px;
+    background: transparent;
+    z-index: 1;
+    margin-left: 0;
+}
+
+.step__active::before, .date__to::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 6px;
+    padding: 3px;
+    background: linear-gradient(to right, #0062E0, #0094FF);
+    -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+.step__content{
+    max-width: 80%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.step__title{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 22px;
+}
+
+.step__text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1A1A1A;
+    margin-bottom: 0;
+}
+
+.step__active .step__title{
+    color: #0062E0;
+}
+
+.step p {
+    display: none;
+}
+
+.step__active p{
+    display: block;
+}
+
+.step__circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    color: #1A1A1A;
+}
+
+.step__active .step__circle {
+    border: unset;
+    background: linear-gradient(to right, #0062E0, #0094FF);
+    color: white;
+    padding-top: 1px;
+}
+
+/**
+ * Date
+ */
+
+.date__from{
+    background: linear-gradient(to right, #0062E0, #0094FF);
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.date__num{
+    color: #fff;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 73px;
+}
+
+.date__day{
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 0;
+}
+
+
+/**
+ * boxs
+ */
+.box{
+    background: #FFF;
+    border-radius: 6px;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.box:hover, .box__active{
+    background: linear-gradient(to right, #0062E0, #0094FF);
+}
+
+.box:hover .box__name, .box:hover .box__price, .box__active .box__name, .box__active .box__price{
+    color: #FFFFFF
+}
+
+.box:hover .box__btn, .box__active .box__btn{
+    color: #0062E0;
+    background:#fff;
+}
+
+.box__name{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 18px;
+    color: #1A1A1A;
+    min-height: 2.5rem;
+}
+
+.box__btn{
+    color: #fff;
+    background: linear-gradient(to right, #0062E0, #0094FF);
+    border-radius: 20px;
+    padding: 5px 0px 3.57px 0px;
+    width: 100%;
+    border: 0;
+}
+
+.box__img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 104.41 / 71.62;
+    object-fit: contain;
+    display: block;
+}
+
+.box__circle{
+    width: 123px;
+    height: 123px;
+    background: #25B700;
+    border-radius: 50%;
+    top: 282px;
+    left: 662px;
+    position: absolute;
+    text-align: center;
+    align-content: center;
+}
+
+.box__circle_title{
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 46px;
+    color: #fff;
+}
+
+.box__circle_subtitle{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 18.4px;
+    color: #fff;
+}
+
+
+/*****/
+
+.tab-content {
+    padding: 50px;
+}
+
+.tab-pane {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tab-pane.active {
+    display: block;
+    opacity: 1;
+}
